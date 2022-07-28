@@ -14,5 +14,27 @@
 </head>
 <body>
     
+    <main>
+        <h1>Mudança de Tema</h1>
+        <div class="troca-cor">
+            <img  class="lua" src="assets/moon.svg" alt="">
+            <img  class="sol" src="assets/sun.svg" alt="">
+            <div class="circulo"></div>
+        </div>
+    </main>
+    <script>
+        $('document').ready(function(){
+            $('.circulo').on('click', function(){
+                $('.circulo').toggleClass('mover');
+                if($('.circulo').hasClass('mover')){
+                    $('main').css('backgroundColor','#292C35')
+                    $('h1').css('color','#F1F1F1')
+                }else{
+                    $('main').css('backgroundColor','#F1F1F1')
+                    $('h1').css('color','#292C35')
+                }
+            });
+        });
+    </script>
 </body>
 </html>
